@@ -23,6 +23,11 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run tests with maven
       run: mvn test
+    - name: Upload JAR artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: sample-java-app-jar
+        path: target/*.jar
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
