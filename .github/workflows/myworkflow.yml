@@ -19,6 +19,15 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Get the version details
+      run: |
+        echo 1. files in this directory
+        ls -a
+        echo
+        echo 2. Java version
+        java --version
+        echo 3. Maven version
+        mvn --version
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run tests with maven
