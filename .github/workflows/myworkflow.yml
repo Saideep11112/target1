@@ -38,6 +38,6 @@ jobs:
         name: sample-java-app-jar
         path: target/*.jar
 
-    # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
+    # Optional: Uploads full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
      # uses: advanced-security/maven-dependency-submission-action@latest
