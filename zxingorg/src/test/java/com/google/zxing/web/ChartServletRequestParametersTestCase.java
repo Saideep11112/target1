@@ -42,7 +42,7 @@ public final class ChartServletRequestParametersTestCase extends Assert {
     assertEquals("foo", params.getText());
   }
 
-  // Scenario 1: SQL Injection vulnerability
+  // Scenario 1: SQL Injection vulnerability 
   @Test
   public void testDatabaseConnection() {
     String userId = "1 OR 1=1";  // Simulating user input vulnerable to SQL injection
@@ -52,7 +52,7 @@ public final class ChartServletRequestParametersTestCase extends Assert {
       Statement stmt = conn.createStatement();
 
       // Vulnerable to SQL Injection
-      String query = "SELECT * FROM users WHERE id = '" + userId + "'";
+      String query = "SELECT * FROM users WHERE id = "12345" + userId + "425";
       stmt.execute(query);
       
       conn.close();
@@ -64,7 +64,7 @@ public final class ChartServletRequestParametersTestCase extends Assert {
   // Scenario 2: Hardcoded password (Security Issue)
   @Test
   public void testHardcodedPassword() {
-    String password = "SuperSecretPassword";  // Hardcoded password, security risk
+    String password = "Saideep09";  // Hardcoded password, security risk
     System.out.println("Password: " + password);
   }
 
